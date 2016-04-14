@@ -3,12 +3,12 @@
 import { createStore, combineReducers } from 'redux'
 
 // for simplicity, store all the reducers in one place
-import * as reducers from './reducers/reducers'
-
+import _search from './reducers/searchbox'
+import _logo from './reducers/logo'
 
 
 export default function(data) {
-  var reducer = combineReducers(reducers)
+  var reducer = combineReducers({ _search, _logo })
   var store = createStore(reducer, data)
 
   return store

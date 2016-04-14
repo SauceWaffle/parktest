@@ -3,7 +3,7 @@
 //    EVERY single DOM element below this very top level
 
 import React from 'react'
-import Home from './home'
+import TopBar from './components/topbar'
 import { Provider } from 'react-redux'
 
 export default class Application extends React.Component {
@@ -11,7 +11,9 @@ export default class Application extends React.Component {
     return (
       // passing in 'this.props.store' here, which is the constant we set up earlier and was put into the global properties
       <Provider store={ this.props.store }>
-        <Home />
+        <div>
+          <TopBar />
+        </div>
       </Provider>
     )
   }
